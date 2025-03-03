@@ -13,7 +13,7 @@ class MovieModelTest(TestCase):
             title="Test Movie",
             description="A test movie description",
             release_date="2025-01-01",
-            duration=timedelta(hours=1, minutes=30)  # Use timedelta for duration
+            duration=timedelta(hours=1, minutes=30)  
         )
 
     def test_movie_creation(self):
@@ -40,7 +40,7 @@ class BookingModelTest(TestCase):
             title="Test Movie",
             description="A test movie description",
             release_date="2025-01-01",
-            duration=timedelta(hours=1, minutes=30)  # Use timedelta for duration
+            duration=timedelta(hours=1, minutes=30)  
         )
         self.seat = Seat.objects.create(seat_number="A1", booking_status=False)
         self.booking = Booking.objects.create(movie=self.movie, seat=self.seat, user=self.user)
@@ -57,7 +57,7 @@ class MovieAPITestCase(APITestCase):
             title="Test Movie",
             description="A test movie description",
             release_date="2025-01-01",
-            duration=timedelta(hours=1, minutes=30)  # Use timedelta for duration
+            duration=timedelta(hours=1, minutes=30)  
         )
 
     def test_movie_list(self):
@@ -76,7 +76,7 @@ class BookingAPITestCase(APITestCase):
             title="Test Movie",
             description="A test movie description",
             release_date="2025-01-01",
-            duration=timedelta(hours=1, minutes=30)  # Use timedelta for duration
+            duration=timedelta(hours=1, minutes=30)  
         )
         self.seat = Seat.objects.create(seat_number="A1", booking_status=False)
         self.client.login(username='testuser', password='testpassword')

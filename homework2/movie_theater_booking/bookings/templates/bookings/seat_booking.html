@@ -1,7 +1,6 @@
-{% extends 'bookings/base.html' %}
-{% block title %}Book a Seat{% endblock %}
+{% extends "bookings/base.html" %}
 {% block content %}
-<h2>Book a Seat</h2>
+<h2>Book a Seat for {{ movie.title }}</h2>
 <form method="post" action="{% url 'submit_booking' movie.id %}">
     {% csrf_token %}
     <div class="form-group">
